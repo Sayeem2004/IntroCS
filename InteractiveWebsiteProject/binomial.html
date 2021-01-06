@@ -1,0 +1,116 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+  <title> Binomial Tab </title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="univariate.html">Univariate</a>
+    <a href="bivariate.html">Bivariate</a>
+    <a href="normal.html">Normal</a>
+    <a class="active" href="binomial.html">Binomial</a>
+    <a href="about.html">About</a>
+  </div>
+  <h1> Binomial Distribution Calculation </h1>
+  <form method="get" action="binomial.py">
+    <div class="box2">
+      <h2 align="center"> Input </h2>
+      <input class="spec" type="text" name="trial" id="trial">
+      <label for="mean"> Number of Trials </label>
+      <br> <br>
+      <input class="spec" type="text" name="prob" id="prob">
+      <label for="SD"> Probability of Success </label>
+      <br> <br>
+    </div>
+    <br> <br>
+    <div class="box">
+      <h2> Check Number of Trials <h2>
+      <input type="button" class="button" id="ch1" value="Click Me" onclick="check1()">
+      <p id="c1" class="before"> </p>
+      <p id="c2" class="before"> </p>
+      <p id="c3" class="before"> </p>
+      <p id="c4" class="before"> </p>
+      <h2> Check Probability of Success <h2>
+      <input type="button" class="button" id="ch2" value="Click Me" onclick="check2()">
+      <p id="c5" class="before"> </p>
+      <p id="c6" class="before"> </p>
+      <p id="c7" class="before"> </p>
+      <p id="c8" class="before"> </p>
+      <p id="c9" class="before"> </p>
+      <h2> Submit Inputs <h2>
+      <input type="submit" class="button" value="Click Me">
+      <br>
+    </div>
+  </form>
+  <script>
+  function check1() {
+    // Obtaining Input
+    var x = document.getElementById('trial').value;
+    // Checking Input
+    foreign(x, 'c1');
+    integer(x, 'c2');
+    input(x, 'c3');
+    // Obtaining The Results Of The Checking
+    var t = document.getElementById('c1').className;
+    var t2 = document.getElementById('c2').className;
+    var t3 = document.getElementById('c3').className;
+    var c = "right";
+    // Outputting Answer
+    if (t == c && t2 == c && t3 == c) {
+      document.getElementById('c4').className = "right";
+      var ret = "You are Ready to Submit";
+      document.getElementById('c4').innerHTML = ret;
+    } else {
+      document.getElementById('c4').className = "wrong";
+      var ret = "You are not Ready to Submit";
+      document.getElementById('c4').innerHTML = ret;
+    }
+  }
+
+  function check2() {
+    // Obtaining Input
+    var x = document.getElementById('prob').value;
+    // Checking Input
+    foreign(x, 'c5');
+    rational(x, 'c6');
+    input(x, 'c7');
+    between(x, 'c8');
+    // Obtaining The Results Of The Checking
+    var t = document.getElementById('c5').className;
+    var t2 = document.getElementById('c6').className;
+    var t3 = document.getElementById('c7').className;
+    var t4 = document.getElementById('c8').className;
+    var c = "right";
+    // Outputting Answer
+    if (t == c && t2 == c && t3 == c && t4 == c) {
+      document.getElementById('c9').className = "right";
+      var ret = "You are Ready to Submit";
+      document.getElementById('c9').innerHTML = ret;
+    } else {
+      document.getElementById('c9').className = "wrong";
+      var ret = "You are not Ready to Submit";
+      document.getElementById('c9').innerHTML = ret;
+    }
+  }
+  </script>
+  <br> <br>
+  <div class="box">
+    <h2> Example Files (Copy and Paste them over to the input section) </h2>
+    <a class="spec" href="Ex10.txt"> Example 1 </a>
+    <br> <br>
+    <a class="spec" href="Ex11.txt"> Example 2 </a>
+    <br> <br>
+    <a class="spec" href="Ex12.txt"> Example 3 </a>
+    <br> <br>
+  </div>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <div class="boxlink">
+    <input type="button" name="top" id="top" value="Go To Top" onclick="window.scrollTo(0,0)" class="button">
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html> 
+<body> 
+<center> 
+<h3>The Basel Problem Calculations</h3> 
+<table border="1"> 
+<tr> 
+<b> 
+<td>N</td> 
+<td>Sum</td> 
+<td>pi*pi/6</td><td>Differences</td> 
+</b> 
+</tr> 
+</table> 
+</center> 
+</body> 
+</html> 

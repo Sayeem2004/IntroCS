@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Interactive Letter Form </title>
+  </head>
+  <body>
+    <form method="get" action="letter-writer.py">
+      <input type="checkbox" name="date" value="ON"> Add Date Here. <br>
+      Dear
+      <input type="radio" name="honorifics" value="Mr.">
+      <label for="Mr.">Mr.</label>
+      <input type="radio" name="honorifics" value="Ms.">
+      <label for="Ms.">Ms.</label>
+      <input type="text" name="fullname"> <br>
+      It is with great pleasure that we have decided to send you this
+      <select size="4" name="random">
+        <option>kitten</option>
+        <option>kangaroo</option>
+        <option>Venus fly-trap</option>
+        <option>Mother-in-law</option>
+      </select>
+      as a small token of our esteem. <br> <br>
+      Unfortunately, returns are currently not possible. <br>
+      Sincerely, <br>
+      The Management <br> <br>
+      <input type="submit" value="Write It">
+    </form>
+  </body>
+</html>

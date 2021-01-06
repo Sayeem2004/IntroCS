@@ -1,0 +1,128 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+  <title> Bivariate Tab </title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="univariate.html">Univariate</a>
+    <a class="active" href="bivariate.html">Bivariate</a>
+    <a href="normal.html">Normal</a>
+    <a href="binomial.html">Binomial</a>
+    <a href="about.html">About</a>
+  </div>
+  <h1> Bivariate Data Calculation </h1>
+  <form method="get" action="bivariate.py">
+    <div class="box">
+      <h2> Input(1) Type </h2>
+      <input type="radio" name="type1" id="SSV" value="SSV">
+      <label for="SSV">SSV(Space Separated Values)</label>
+      <input type="radio" name="type1" id="CSV" value="CSV" checked>
+      <label for="CSV">CSV(Comma Separated Values)</label>
+      <h2> Input(1) </h2>
+      <input id="input1" name="input1" class="spec" type="text">
+      <h2> Input(2) Type </h2>
+      <input type="radio" name="type2" id="SSV2" value="SSV2">
+      <label for="SSV">SSV(Space Separated Values)</label>
+      <input type="radio" name="type2" id="CSV2" value="CSV2" checked>
+      <label for="CSV">CSV(Comma Separated Values)</label>
+      <h2> Input(2) </h2>
+      <input id="input2" name="input2" class="spec" type="text">
+      <br> <br>
+    </div>
+    <br> <br>
+    <div class="box">
+      <h2> Check Input(1) </h2>
+      <input class="button" type="button" value="Click Me" onclick="check1()">
+      <p id="c1" class="before"> </p>
+      <p id="c2" class="before"> </p>
+      <p id="c3" class="before"> </p>
+      <p id="c4" class="before"> </p>
+      <p id="c5" class="before"> </p>
+      <h2> Check Input(2) </h2>
+      <input class="button" type="button" value="Click Me" onclick="check2()">
+      <p id="c6" class="before"> </p>
+      <p id="c7" class="before"> </p>
+      <p id="c8" class="before"> </p>
+      <p id="c9" class="before"> </p>
+      <p id="c10" class="before"> </p>
+      <br>
+      <h2> Submit Inputs </h2>
+      <input class="button" type="submit" value="Click Me">
+      <br> <br>
+    </div>
+  </form>
+  <script>
+  function check1() {
+    // Obtaining Input
+    var x = document.getElementById('input1').value;
+    // Checking Input
+    foreign(x, 'c1');
+    mrational(x, 'c2', 'SSV');
+    spacing(x, 'c3', 'SSV');
+    input2(x, 'c4', 'SSV');
+    // Obtaining The Results Of The Checking
+    var t = document.getElementById('c1').className;
+    var t2 = document.getElementById('c2').className;
+    var t3 = document.getElementById('c3').className;
+    var t4 = document.getElementById('c4').className;
+    var c = "right";
+    // Outputting Answer
+    if (t == c && t2 == c && t3 == c && t4 == c) {
+      document.getElementById('c5').className = "right";
+      var ret = "You Are Ready To Submit";
+      document.getElementById('c5').innerHTML = ret;
+    } else {
+      document.getElementById('c5').className = "wrong";
+      var ret = "You Are Not Ready To Submit";
+      document.getElementById('c5').innerHTML = ret;
+    }
+  }
+
+  function check2() {
+    // Obtainign Input
+    var x = document.getElementById('input2').value;
+    // Checking Input
+    foreign(x, 'c6');
+    mrational(x, 'c7', 'SSV2');
+    spacing(x, 'c8', 'SSV2');
+    input2(x, 'c9', 'SSV2');
+    // Obtaining The Results Of The Checking
+    var t = document.getElementById('c6').className;
+    var t2 = document.getElementById('c7').className;
+    var t3 = document.getElementById('c8').className;
+    var t4 = document.getElementById('c9').className;
+    var c = "right";
+    // Outputting Answer
+    if (t == c && t2 == c && t3 == c && t4 == c) {
+      document.getElementById('c10').className = "right";
+      var ret = "You Are Ready To Submit";
+      document.getElementById('c5').innerHTML = ret;
+    } else {
+      document.getElementById('c10').className = "wrong";
+      var ret5 = "You Are Not Ready To Submit";
+      document.getElementById('c10').innerHTML = ret;
+    }
+  }
+  </script>
+  <br>
+  <div class="box">
+    <h2> Example Files (Copy and Paste them over to the input section) </h2>
+    <a class="spec" href="Ex4.txt"> Example (Small) </a>
+    <br> <br>
+    <a class="spec" href="Ex5.txt"> Example (Medium) </a>
+    <br> <br>
+    <a class="spec" href="Ex6.txt"> Example (Large) </a>
+    <br> <br>
+  </div>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <div class="boxlink">
+    <input type="button" name="top" id="top" value="Go To Top" onclick="window.scrollTo(0,0)" class="button">
+  </div>
+</body>
+</html>

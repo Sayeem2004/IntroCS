@@ -1,0 +1,4 @@
+name,grade,age
+Peter,7.8,210
+Voldy,4.3,300
+Harry,9.8,17

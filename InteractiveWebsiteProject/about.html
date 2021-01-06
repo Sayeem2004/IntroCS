@@ -1,0 +1,84 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+  <title> About Tab </title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+</head>
+<body>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="univariate.html">Univariate</a>
+    <a href="bivariate.html">Bivariate</a>
+    <a href="normal.html">Normal</a>
+    <a href="binomial.html">Binomial</a>
+    <a class="active" href="about.html">About</a>
+  </div>
+  <h1> About This Website </h1>
+  <div class="box">
+    <h2> Statistics Cheat Sheet </h2>
+    <p> By Mohammad S. Khan </p>
+  </div>
+  <br> <br>
+  <div class="box">
+    <h2> Intent </h2>
+    <p> My intent for this website was for it to be used a resource to help people with basic statistics problems.</p>
+    <p> Example: It could be used help you complete your math homework. </p>
+    <p> Or it you could use it to just play around with some sample data that are given in the example links at the bottom of the main pages </p>
+    <h2> Usage </h2>
+    <p> 1. Obtain or make up some data </p>
+    <p> 2. Enter the data into an input section </p>
+    <p> 3. Press the check button and edit the data and press the check button again until the check button says "you are ready to submit" </p>
+    <p> 4. Press submit and receive the information about the specific data set </p>
+    <p> Note: that all input fields in a certain section must be filled before the program can work. </p>
+    <p> Note2: For the bivariate tab, the two inputs must have the same number of numbers in it </p>
+  </div>
+  <br> <br>
+  <div class="box">
+    <h2> Usage(Syntax) </h2>
+    <p> There are three main types of inputs my program can recognize and use. </p>
+    <p> <b> Integers: </b> Numbers containing only digits, Most commonly used in "Normal" and "Binomial" </p>
+    <p class="right"> [5] or [567657] or [12323424324] </p>
+    <p class="wrong"> [5wefdsfdf] or [3.] or [324 324] </p>
+    <p> <b> Rational Numbers: </b> Numbers containing only digits and at most 1 period. Used in all the sections </p>
+    <p class="right"> [5.0] or [.567657] or [12323.424324] </p>
+    <p class="wrong"> [5wefdsfdf] or [3..3] or [324 324] </p>
+    <p> <b> Lists: </b> A sequence of at least 2 rational numbers separated by spaces or commas but not both. Used in "Univariate" and "Bivariate" </p>
+    <p class="right"> [5.0,5,5.1] or [.567657 22222] or [12323.424324,1] </p>
+    <p class="wrong"> [5wefdsfdf] or [3,   3,   2] or [324.324] </p>
+    <p> Note: Do not use brackets like shown above, those are only used to help distinguish between numbers in this page. </p>
+    <p> Everything else should be self explanatory as soon as you press the check button <p>
+    <h2> Bugs </h2>
+    <p> I have not run into any major bugs yet, however if there is a bug it is most likely to do with an extra space, comma, or period somewhere. </p>
+    <p> So that means if the submit button fails to take you to the next page but the check button says your data is good, it is most likely the issue mentioned above </p>
+    <p> To fix it you can look through your data through a python program or even by hand and get rid of any unwanted characters that are making my website fail </p>
+    <p> Note: My website only works best with small-medium  numbers and lists because of how graph pixels and moe works </p>
+    <p> Another small bug I just found is that if your data is too varied/random some of the regressions do not work, but this should not be a problem if your data is somewhat reasonable </p>
+  </div>
+  <br> <br>
+  <div class="box">
+    <h2> Experience </h2>
+    <p> Throughout this project I have learned many things including that I hate semi colons with a burning passion and that javascript is a pretty cool language </p>
+    <p> I have also learned that thinking of a good idea for a website is difficult and then actually making that website is even more difficult </p>
+    <p> I also relearned CSS, refined my python and html, and even learned a new language(Javascript) </p>
+    <h2> Failures </h2>
+    <p> I kind of overshot what I was going to be able with Javascript that I learned on my own, so some things in my project proposal were left out </p>
+    <p> One failure that I had was that I was unable to create checkboxes that show and hide data. However, this was purely cosmetic so I don't think it is an issue </p>
+    <p> The other failure that I had was that I was unable to include trivariate data because I was unable to incorporate 3d graphs </p>
+  </div>
+  <br> <br>
+  <div class="box">
+    <h2> Sources </h2>
+    <p> Credit to W3Schools for helping me learn javascript </p>
+    <p> Credit to users of Stack Overflow for helping me learn scipy and numpy </p>
+    <h2> Acknowledgements </h2>
+    <p> Credit to the Alvin Li, Ivan Wei, Andrew Juang, and Jeremy Ku-Benjet for helping me with tech support and also testing out my website </p>
+    <p> Credit to Anya Zorin, becaue I stole the CSS for my navigation bar from her website </p>
+  </div>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <div class="boxlink">
+    <input type="button" name="top" id="top" value="Go To Top" onclick="window.scrollTo(0,0)" class="button"> </input>
+  </div>
+</body>
+</html>

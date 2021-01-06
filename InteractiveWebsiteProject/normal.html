@@ -1,0 +1,146 @@
+<DOCTYPE! HTML>
+<html>
+<head>
+  <title> Normal Tab </title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="univariate.html">Univariate</a>
+    <a href="bivariate.html">Bivariate</a>
+    <a class="active" href="normal.html">Normal</a>
+    <a href="binomial.html">Binomial</a>
+    <a href="about.html">About</a>
+  </div>
+  <h1> Normal Distribution Calculation </h1>
+  <form method="get" action="normal.py">
+    <div class="box2">
+      <h2 align="center"> Input </h2>
+      <input class="spec" type="text" name="mean" id="mean">
+      <label for="mean"> Mean </label>
+      <br> <br>
+      <input class="spec" type="text" name="SD" id="SD">
+      <label for="SD"> Standard Deviation </label>
+      <br> <br>
+      <input class="spec" type="text" name="SPS" id="SPS">
+      <label for="SD"> Sample/Population Size </label>
+      <br> <br>
+    </div>
+    <br> <br>
+    <div class="box">
+      <h2> Check Mean <h2>
+      <input type="button" class="button" id="ch1" value="Click Me" onclick="check1()">
+      <p id="c1" class="before"> </p>
+      <p id="c2" class="before"> </p>
+      <p id="c3" class="before"> </p>
+      <p id="c4" class="before"> </p>
+      <h2> Check Standard Deviation <h2>
+      <input type="button" class="button" id="ch2" value="Click Me" onclick="check2()">
+      <p id="c5" class="before"> </p>
+      <p id="c6" class="before"> </p>
+      <p id="c7" class="before"> </p>
+      <p id="c8" class="before"> </p>
+      <h2> Check Sample/Population Size <h2>
+      <input type="button" class="button" id="ch3" value="Click Me" onclick="check3()">
+      <p id="c9" class="before"> </p>
+      <p id="c10" class="before"> </p>
+      <p id="c11" class="before"> </p>
+      <p id="c12" class="before"> </p>
+      <h2> Submit Inputs <h2>
+      <input type="submit" class="button" value="Click Me">
+      <br>
+    </div>
+  </form>
+  <script>
+  function check1() {
+    // Obtaining Input
+    var x = document.getElementById('mean').value;
+    // Checking Input
+    foreign(x, 'c1');
+    rational(x, 'c2');
+    input(x, 'c3');
+    // Obtaining The Results Of The Checking
+    var t = document.getElementById('c1').className;
+    var t2 = document.getElementById('c2').className;
+    var t3 = document.getElementById('c3').className;
+    var c = "right";
+    // Outputting Answer
+    if (t == c && t2 == c && t3 == c) {
+      document.getElementById('c4').className = "right";
+      var ret = "You are Ready to Submit";
+      document.getElementById('c4').innerHTML = ret;
+    } else {
+      document.getElementById('c4').className = "wrong";
+      var ret = "You are not Ready to Submit";
+      document.getElementById('c4').innerHTML = ret;
+    }
+  }
+
+  function check2() {
+    // Obtaining Input
+    var x = document.getElementById('SD').value;
+    // Checking Input
+    foreign(x, 'c5');
+    rational(x, 'c6');
+    input(x, 'c7');
+    // Obtaining The Results Of The Checking
+    var t = document.getElementById('c5').className;
+    var t2 = document.getElementById('c6').className;
+    var t3 = document.getElementById('c7').className;
+    var c = "right";
+    // Outputting Answer
+    if (t == c && t2 == c && t3 == c) {
+      document.getElementById('c8').className = "right";
+      var ret = "You are Ready to Submit";
+      document.getElementById('c8').innerHTML = ret;
+    } else {
+      document.getElementById('c8').className = "wrong";
+      var ret = "You are not Ready to Submit";
+      document.getElementById('c8').innerHTML = ret;
+    }
+  }
+
+  function check3() {
+    // Obtaining Input
+    var x = document.getElementById('SPS').value;
+    // Checking Input
+    foreign(x, 'c9');
+    integer(x, 'c10');
+    input(x, 'c11');
+    // Obtaining The Results Of The Checking
+    var t = document.getElementById('c9').className;
+    var t2 = document.getElementById('c10').className;
+    var t3 = document.getElementById('c11').className;
+    var c = "right";
+    // Outputting Answer
+    if (t == c && t2 == c && t3 == c) {
+      document.getElementById('c12').className = "right";
+      var ret = "You are Ready to Submit";
+      document.getElementById('c12').innerHTML = ret;
+    } else {
+      document.getElementById('c12').className = "wrong";
+      var ret = "You are not Ready to Submit";
+      document.getElementById('c12').innerHTML = ret;
+    }
+  }
+  </script>
+  <br> <br>
+  <div class="box">
+    <h2> Example Files (Copy and Paste them over to the input section) </h2>
+    <a class="spec" href="Ex7.txt"> Example 1 </a>
+    <br> <br>
+    <a class="spec" href="Ex8.txt"> Example 2 </a>
+    <br> <br>
+    <a class="spec" href="Ex9.txt"> Example 3 </a>
+    <br> <br>
+  </div>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <div class="boxlink">
+    <input type="button" name="top" id="top" value="Go To Top" onclick="window.scrollTo(0,0)" class="button">
+  </div>
+</body>
+</html>
